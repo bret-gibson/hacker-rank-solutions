@@ -6,7 +6,8 @@ const compareTriplets = (a, b) => {
   for (let i = 0; i < a.length; i++) {
     if (a[i] > b[i]) {
       alice += 1;
-    } else {
+      //added the else if here for if there is a tie
+    } else if (a[i] < b[i]) {
       bob += 1;
     }
   }
@@ -16,9 +17,9 @@ const compareTriplets = (a, b) => {
   return finalArr;
 };
 
-let alice = [17, 28, 30];
-let bob = [99, 16, 8];
+let alice = [5, 6, 7];
+let bob = [3, 6, 10];
 
 compareTriplets(alice, bob);
 
-//outputs 2 1 which is correct
+//outputs 1 1 which is correct
