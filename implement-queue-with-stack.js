@@ -1,6 +1,8 @@
 
-var MyQueue = function() {
-    this.stack = [];
+class MyQueue{
+    constructor(){
+        this.stack = [];
+    }
 
     push(val) {
         const newStack = [];
@@ -8,7 +10,7 @@ var MyQueue = function() {
         while (this.stack.length > 0) {
             newStack.push(this.stack.pop());
         }
-        newStack.push(x);
+        newStack.push(val);
         while (newStack.length > 0) {
             this.stack.push(newStack.pop());
         }
